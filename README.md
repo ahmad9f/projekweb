@@ -1,2 +1,2 @@
 # projekweb
-tugas web penjualan
+tugas web toko
