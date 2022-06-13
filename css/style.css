@@ -373,7 +373,7 @@ section {
         position: absolute;
         top: 100%;
         right: 10%;
-        background-color: none;
+        background-color: var(--white);
     }
     .header .flex .navbar a {
         display: none;
