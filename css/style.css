@@ -26,7 +26,7 @@
 
 ::-webkit-scrollbar {
     height: .5rem;
-    width: 1rem;
+    width: 1.5rem;
 }
 
 ::-webkit-scrollbar-track {
@@ -113,15 +113,8 @@ section {
     color: var(--main-color);
 }
 
-#menu-btn {
-    display: none;
-    font-size: 2.5rem;
-    color: var(--black);
-    cursor: pointer;
-}
-
 .home-bg {
-    background: linear-gradient(90deg, var(--white), transparent 70%), url(../images/home-bg.jpg) no-repeat;
+    background: linear-gradient(90deg, var(--white), transparent 65%), url(../images/home-bg.jpg) no-repeat;
     background-size: cover;
     background-position: center;
 }
@@ -177,6 +170,7 @@ section {
 }
 
 .about .content p {
+    text-align: center;
     padding: 1rem 0;
     line-height: 2;
     color: var(--light-color);
@@ -333,23 +327,28 @@ section {
     border-top: var(--border);
     font-size: 2rem;
     color: var(--black);
-    /* padding-bottom: 7rem; */
+    padding-bottom: 7rem;
 }
 
 .footer .credit span {
     color: var(--main-color);
 }
 
+#menu-bar {
+    display: none;
+}
+
+.header label {
+    display: none;
+    font-size: 2rem;
+    color: var(--black);
+    cursor: pointer;
+}
+
 
 /* media queries  */
 
-@media (max-width:991px) {
-    html {
-        font-size: 55%;
-    }
-}
-
-@media (max-width:768px) {
+@media (max-width:835px) {
     .header {
         text-align: center;
     }
@@ -363,13 +362,34 @@ section {
         font-size: 4rem;
     }
     .about .content h3 {
+        justify-content: center;
+        text-align: center;
         font-size: 3rem;
     }
 }
 
-@media (max-width:375px) {
+@media (max-width:428px) {
+    .header .flex .navbar {
+        position: absolute;
+        top: 100%;
+        right: 10%;
+        background-color: none;
+    }
+    .header .flex .navbar a {
+        display: none;
+        margin: 0.5rem;
+    }
+    .header label {
+        display: initial;
+    }
+    #menu-bar:checked~.navbar a {
+        display: initial;
+    }
+    .header {
+        text-align: center;
+    }
     html {
-        font-size: 50%;
+        font-size: 55%;
     }
     .heading img {
         height: 3rem;
